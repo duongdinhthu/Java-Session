@@ -1,6 +1,6 @@
 package Session2;
 
-public class Person {
+public class Person extends Enimal {
     private int id;
     private String name;
     private Integer bornYear;
@@ -59,11 +59,10 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", bornYear=" + bornYear +
                 ", phone='" + phone + '\'' +
                 '}';
     }
-
-
 }

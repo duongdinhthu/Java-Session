@@ -1,5 +1,6 @@
 package Session4.Cylinder;
 
+
 import Session4.CirCle;
 
 public class Cylinder extends CirCle {
@@ -16,5 +17,10 @@ public class Cylinder extends CirCle {
 
     public double getVolume() {
         return getArea() * height;
+    }
+
+    @Override
+    public String getAreaCircle() {
+        return "Area results";
     }
 }
