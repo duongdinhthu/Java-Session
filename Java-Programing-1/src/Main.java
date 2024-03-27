@@ -1,6 +1,5 @@
 import Session2.Person;
 //import Session3.SportCar;
-
 import java.sql.PreparedStatement;// kế thuwfa hoàn toàn khi đã import
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
