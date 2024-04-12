@@ -4,19 +4,25 @@ import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import static edunextS15.Controller.getBalanceNumber;
+
 public class TransactionHistory {
     private Long id;
     private LocalDate dayTrading;
     private String description;
     private String beneficiaryAccount;
     private long money;
-    public TransactionHistory(String description,String beneficiaryAccount, long money){
+    public TransactionHistory(String description,String beneficiaryAccount, long money,LocalDate day){
         this.id = IdGenerate.getNewId();
-        this.dayTrading = LocalDate.now();
+        this.dayTrading = day;
         this.description = description;
         this.beneficiaryAccount = beneficiaryAccount;
         this.money = money;
     }
+
+    public TransactionHistory() {
+    }
+
     public  String getBeneficiaryAccount(){
         return beneficiaryAccount;
     }
@@ -37,6 +43,6 @@ public class TransactionHistory {
                 ", description='" + description + '\'' +
                 ", beneficiaryAccount='" + beneficiaryAccount + '\'' +
                 ", money=" + money +
-                '}';
+                '}' ;
     }
 }
