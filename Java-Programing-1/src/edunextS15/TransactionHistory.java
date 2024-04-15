@@ -19,9 +19,9 @@ public class TransactionHistory {
         this.beneficiaryAccount = beneficiaryAccount;
         this.money = money;
     }
-
     public TransactionHistory() {
     }
+
 
     public  String getBeneficiaryAccount(){
         return beneficiaryAccount;
