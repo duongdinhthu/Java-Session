@@ -2,6 +2,10 @@ package edunextS15;
 
 import java.util.Scanner;
 
+import static edunextS15.ActionTransfer.actionTransfer;
+import static edunextS15.Format.formatMoney;
+import static edunextS15.GetHistory.getHistory;
+
 public class Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,14 +26,14 @@ public class Application {
                 case 1:
                     System.out.println("So du");
                     long balance = controller.getBalanceNumber();
-                    System.out.println(Controller.formatMoney(balance));
+                    System.out.println(formatMoney(balance));
                     break;
                 case 2:
-                    controller.actionTransfer();
+                    actionTransfer();
                     break;
                 case 3:
                     System.out.println("Lich su giao dich");
-                    controller.getHistory();
+                    getHistory();
                     break;
                 case 0:
                         scanner.close();

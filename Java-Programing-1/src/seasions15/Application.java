@@ -3,6 +3,7 @@ package seasions15;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static edunextS15.Format.formatMoney;
 import static seasions15.Controller.getBalancerNumber;
 
 public class Application {
@@ -28,7 +29,7 @@ public class Application {
                    case 1:
                        System.out.println("Account balance: ");
                        long balance = getBalancerNumber();
-                       System.out.println(edunextS15.Controller.formatMoney(balance));
+                       System.out.println(formatMoney(balance));
                        break;
                    case 2:
                        controller.actionTransfer();
