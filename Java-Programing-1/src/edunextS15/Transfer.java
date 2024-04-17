@@ -3,7 +3,7 @@ package edunextS15;
 import java.time.LocalDate;
 
 import static edunextS15.Controller.balanceNumber;
-import static edunextS15.Controller.listHistory;
+import static edunextS15.ListHistory.listHistory;
 import static edunextS15.Messenge.Mess;
 
 public class Transfer {
@@ -15,7 +15,6 @@ public class Transfer {
         }else {
             long bank = balanceNumber - money;
             balanceNumber = bank;
-
            Mess(money);
             TransactionHistory  newTransaction = new TransactionHistory(description,beneficiaryAccount,money,day);
             listHistory.add(newTransaction);

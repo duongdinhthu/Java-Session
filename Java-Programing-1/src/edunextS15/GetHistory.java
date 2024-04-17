@@ -1,6 +1,6 @@
 package edunextS15;
 
-import static edunextS15.Controller.listHistory;
+import static edunextS15.ListHistory.listHistory;
 
 public class GetHistory {
     public static void getHistory(){

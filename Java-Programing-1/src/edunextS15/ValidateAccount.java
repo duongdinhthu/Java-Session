@@ -1,10 +1,10 @@
 package edunextS15;
 
 public class ValidateAccount {
-    public final String MOBILE = "0904999999";
-    public final String PASSWORD = "Ngo Van Khoai";
+    public static final String MOBILE = "000";
+    public static final String PASSWORD = "ok";
 
-    public boolean checkAccount(String mobile, String password) {
+    public static boolean checkAccount(String mobile, String password) {
         if (mobile.equals(MOBILE)) {
             if (password.equals(PASSWORD)) {
                 System.out.println("Dang nhap thanh cong");

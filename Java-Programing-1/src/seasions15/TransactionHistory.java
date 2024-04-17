@@ -8,7 +8,7 @@ import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static edunextS15.Controller.getBalanceNumber;
+import static edunextS15.GetBalanceNumber.getBalanceNumber;
 
 public class TransactionHistory {
     private Long id;

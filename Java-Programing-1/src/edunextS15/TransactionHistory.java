@@ -4,7 +4,8 @@ import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static edunextS15.Controller.getBalanceNumber;
+import static edunextS15.GetBalanceNumber.getBalanceNumber;
+import static edunextS15.GetNewId.getNewId;
 
 public class TransactionHistory {
     private Long id;
@@ -13,7 +14,7 @@ public class TransactionHistory {
     private String beneficiaryAccount;
     private long money;
     public TransactionHistory(String description,String beneficiaryAccount, long money,LocalDate day){
-        this.id = IdGenerate.getNewId();
+        this.id = getNewId();
         this.dayTrading = day;
         this.description = description;
         this.beneficiaryAccount = beneficiaryAccount;
