@@ -1,12 +1,13 @@
 package connect2;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import static connect2.CRUDColumn.deleteColum;
 
 
 public class DeleteColumn {
-    public static void deleteColumn(){
+    public static void deleteColumn() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the column name delete:");
         String nameColumn = scanner.nextLine();
