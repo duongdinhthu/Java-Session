@@ -1,20 +1,17 @@
-package connect2;
+package sessionDBconnect;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MySqlConnect {
-
-
-
+public class Dbconnection {
     public static Connection getMySQLConnection() throws SQLException {
         Connection connection = null;
         String hostName = "localhost";
         String dbName = "EmployeeFPT";
         String userName = "root";
         String password = "";
-        String connectionURL = "jdbc:sql://"+hostName+":3306"+dbName;
+        String connectionURL = "jdbc:mysql://"+hostName+":3306/"+dbName;
         try {
             connection = DriverManager.getConnection(connectionURL,userName,password);
 
@@ -23,12 +20,12 @@ public class MySqlConnect {
         }
         return connection ;
     }
-//    public static void main(String[] args) throws SQLException {
-//        if (getMySQLConnection() != null) {
-//            System.out.println("Connect Database success!");
-//        }
-//        //get connection:goi doi tuong ket noi la connection de su dung
-//        Connection connection = getMySQLConnection();// tra ve 1 doi tuong connection
-//
-//    }
+    public static void main(String[] args) throws SQLException {
+        if (getMySQLConnection() != null) {
+            System.out.println("Connect Database success!");
+        }
+        //get connection:goi doi tuong ket noi la connection de su dung
+        Connection connection = getMySQLConnection();// tra ve 1 doi tuong connection
+
+    }
 }

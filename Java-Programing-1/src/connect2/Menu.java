@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 import static connect2.CRUDatabase.*;
 import static connect2.Create.create;
+import static connect2.CreateTable.createTable;
 import static connect2.Delete.delete;
+import static connect2.DeleteTable.deleteTable;
 import static connect2.GetColumn.getCL;
 import static connect2.Menu1.menu;
 import static connect2.Search.search;
@@ -44,6 +46,15 @@ public class Menu {
                             getCL();
                             exit = true;
                             break;
+                        case 7:
+                            System.out.println("Remove Table");
+                            deleteTable();
+                            break;
+                        case 8:
+                            System.out.println("Create Table");
+                            createTable();
+                            break;
+
                         case 0:
                             scanner.close();
                             System.exit(0);

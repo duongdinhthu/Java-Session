@@ -9,6 +9,8 @@ public class Menu1 {
         System.out.println("4.Delete");
         System.out.println("5.Search");
         System.out.println("6.Get column");
+        System.out.println("7.Delete table");
+        System.out.println("8.Create Table");
         System.out.println("0.Thoat");
     }
 }

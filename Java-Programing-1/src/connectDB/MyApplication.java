@@ -70,7 +70,7 @@ public static void setStatementUpdate(String query) throws SQLException {
             System.out.println("Last Name  :" + rs.getString(3));
             System.out.println("Email : " + rs.getString("email"));
         }
-connection.close();
+
     }
     public static void getAll() throws  SQLException{
 
@@ -96,7 +96,7 @@ connection.close();
             System.out.println("Email : " + email);
         }
         //gọi xong ra thì đóng lai
-        connection.close();
+
 
     }
     public static void createCustomer() throws SQLException {
