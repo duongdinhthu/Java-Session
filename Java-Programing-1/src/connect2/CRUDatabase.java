@@ -1,6 +1,6 @@
 package connect2;
 
-import connectDB.MySQLConnectDB;
+
 
 import java.sql.*;
 
@@ -14,7 +14,7 @@ public class CRUDatabase {
     }
 
     public static Connection openConnection() throws SQLException {
-        connection = MySQLConnectDB.getMySQLConnection();
+        connection = MySqlConnect.getMySQLConnection();
         return connection;
     }
     public static Statement statement;

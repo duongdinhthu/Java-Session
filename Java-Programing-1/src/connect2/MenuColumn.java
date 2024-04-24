@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import static connect2.CRUDatabase.tableDB;
 import static connect2.CreateColumn.addColumn;
-
 import static connect2.DeleteColumn.deleteColumn;
 import static connect2.GetColumn.getCL;
 import static connect2.Menu.menu;
