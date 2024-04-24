@@ -20,12 +20,5 @@ public class Dbconnection {
         }
         return connection ;
     }
-    public static void main(String[] args) throws SQLException {
-        if (getMySQLConnection() != null) {
-            System.out.println("Connect Database success!");
-        }
-        //get connection:goi doi tuong ket noi la connection de su dung
-        Connection connection = getMySQLConnection();// tra ve 1 doi tuong connection
 
-    }
 }
