@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static connect2.CRUDColumn.createColumn;
 
-public class AddColumn {
+public class CreateColumn {
     public static void addColumn() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the new column name: ");

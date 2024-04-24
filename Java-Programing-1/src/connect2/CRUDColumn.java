@@ -1,5 +1,7 @@
 package connect2;
 
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 
@@ -32,6 +34,20 @@ public class CRUDColumn extends CRUDatabase{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        closeConnection();
+    }
+    public static void getAllColumn()throws SQLException{
+        openConnection();
+        ResultSet rs = statement.executeQuery("SELECT * FROM " + tableDB);
+
+        ResultSetMetaData rsmd = rs.getMetaData();
+        int columnCount = rsmd.getColumnCount();
+        System.out.println("Tên các cột trong bảng:");
+        for (int i = 1; i <= columnCount; i++) {
+            String columnName = rsmd.getColumnName(i);
+            System.out.println("Column " + i + ": " + columnName);
+        }
+        System.out.println("====================");
         closeConnection();
     }
 }

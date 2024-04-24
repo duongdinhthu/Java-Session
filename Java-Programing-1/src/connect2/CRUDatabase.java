@@ -6,8 +6,13 @@ import java.sql.*;
 
 public class CRUDatabase {
 
-    public static final String tableDB = "customer";
+    public static  String tableDB = null;
     public static Connection connection;
+
+    public static void setTableDB(String tableDB) {
+        CRUDatabase.tableDB = tableDB;
+    }
+
     public static Connection openConnection() throws SQLException {
         connection = MySQLConnectDB.getMySQLConnection();
         return connection;
@@ -92,20 +97,7 @@ public class CRUDatabase {
             }
             closeConnection();
     }
-    public static void getAllColumn()throws SQLException{
-        openConnection();
-        ResultSet rs = statement.executeQuery("SELECT * FROM " + tableDB);
 
-        ResultSetMetaData rsmd = rs.getMetaData();
-        int columnCount = rsmd.getColumnCount();
-        System.out.println("Tên các cột trong bảng:");
-        for (int i = 1; i <= columnCount; i++) {
-            String columnName = rsmd.getColumnName(i);
-            System.out.println("Column " + i + ": " + columnName);
-        }
-        System.out.println("====================");
-        closeConnection();
-    }
 
     public static void closeConnection() throws SQLException {
         connection.close();

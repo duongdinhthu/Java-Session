@@ -17,7 +17,7 @@ public class CreateTable {
         scanner.nextLine();
         System.out.println("=============");
         for (int i = 0 ; i < numberColumn ; i++ ){
-            System.out.println("Enter the column name " + i + " :");
+            System.out.println("Enter the column name " + (i+1) + " :");
             String namecolumn = scanner.nextLine();
             listColumn.add(namecolumn);
         }
