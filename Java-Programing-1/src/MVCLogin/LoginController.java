@@ -1,4 +1,4 @@
-package sessionDBconnect;
+package MVCLogin;
 
 public class LoginController {
     LoginDAO loginDAO = new LoginDaoImpl();

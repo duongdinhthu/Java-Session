@@ -1,4 +1,4 @@
-package sessionDBconnect;
+package MVCLogin;
 
 import java.sql.*;
 

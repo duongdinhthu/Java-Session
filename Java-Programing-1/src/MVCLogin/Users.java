@@ -1,4 +1,4 @@
-package sessionDBconnect;
+package MVCLogin;
 // Entity <=> table
 public class Users {
     private int id;

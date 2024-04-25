@@ -1,4 +1,4 @@
-package sessionDBconnect;
+package MVCLogin;
 
 public interface LoginDAO {
     public String checkLoginStatement(Users users);
