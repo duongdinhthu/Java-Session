@@ -12,6 +12,7 @@ import static connect2.GetColumn.getCL;
 import static connect2.Menu.menu;
 import static connect2.MenuDataClient.menuData;
 import static connect2.Search.search;
+import static connect2.SearchTab.searchTab;
 import static connect2.Update.update;
 public class MenuData {
     public static void menuCRUD() throws SQLException {
@@ -42,6 +43,11 @@ public class MenuData {
                             System.out.println("Search");
                             search();
                             break;
+                        case 9:
+                            System.out.println("Name Table");
+                            searchTab();
+                            break;
+
                         case 0:
                             menu();
                             exit = true;
@@ -51,7 +57,7 @@ public class MenuData {
                             break;
                     }
                 }catch (Exception e){
-                    System.out.println("da bi loi!");
+                    System.out.println("da bi loi data!");
                 }
             }
     }

@@ -24,8 +24,10 @@ public class LoginDaoImpl implements LoginDAO {
     public String checkLoginStatement(Users users) {
         String query = "select username from users where username = '"+users.getUsername()+"'and password='"+users.getPassword()+"'";
         try{
+            // tao lai statement moi lan thuc thi
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
+
             while (rs.next()){
                 System.out.println("username is : " + rs.getString("username"));
                 return rs.getString("username");
@@ -38,9 +40,10 @@ public class LoginDaoImpl implements LoginDAO {
     }
 
     @Override
-    public String checkLginPrepareStatement(Users users) {
+    public String checkLoginPrepareStatement(Users users) {
         String query = "select username from users where username like ? and password like ?";
         try{
+            // tai su dung lai prepare statement
             pstm = conn.prepareStatement(query);
             pstm.setString(1,users.getUsername());
             pstm.setString(2,users.getPassword());

@@ -42,6 +42,7 @@ public class LoginConsoleUI {
         user.setPassword(password);
         //step 1 call controller
         String result = loginController.loginPrepareController(user);
+        // step 4 to view (return to view from model)
         System.out.println(result);
     }
     public void start(){
