@@ -41,11 +41,10 @@ public class MenuColumn {
                         exit = true;
                         break;
                     case 9:
-                        if (tableDB== null){
                             System.out.println("Name Table");
                             searchTab();
                             break;
-                        }
+
 
                     default:
                         System.out.println("Khong co lua chon nay");

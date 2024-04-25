@@ -9,19 +9,15 @@ public class MySqlConnect {
 
 
     public static Connection getMySQLConnection() throws SQLException {
-        Connection connection = null;
-        String hostName = "localhost";
-        String dbName = "EmployeeFPT";
+        Connection conn = null;
+        String hostName = "127.0.0.1";//127.0.1 hoac localhost
+        String dbName = "employeefpt";
         String userName = "root";
         String password = "";
-        String connectionURL = "jdbc:sql://"+hostName+":3306"+dbName;
-        try {
-            connection = DriverManager.getConnection(connectionURL,userName,password);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return connection ;
+        //String connection( chuoi ket noi )
+        String connectionURL = "jdbc:mysql://"+hostName+":3306/"+dbName;
+        conn = DriverManager.getConnection(connectionURL,userName,password);
+        return conn;
     }
 //    public static void main(String[] args) throws SQLException {
 //        if (getMySQLConnection() != null) {

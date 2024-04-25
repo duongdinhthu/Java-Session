@@ -42,8 +42,6 @@ public class MenuData {
                             System.out.println("Search");
                             search();
                             break;
-
-
                         case 0:
                             menu();
                             exit = true;
