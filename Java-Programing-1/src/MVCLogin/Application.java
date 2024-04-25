@@ -1,5 +1,7 @@
 package MVCLogin;
 
+import MVCLogin.view.LoginConsoleUI;
+
 import java.io.IOException;
 
 public class Application {

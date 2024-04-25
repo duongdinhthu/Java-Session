@@ -1,4 +1,8 @@
-package MVCLogin;
+package MVCLogin.controller;
+
+import MVCLogin.model.LoginDAO;
+import MVCLogin.model.LoginDaoImpl;
+import MVCLogin.entity.Users;
 
 public class LoginController {
     LoginDAO loginDAO = new LoginDaoImpl();

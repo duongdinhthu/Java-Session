@@ -1,4 +1,4 @@
-package MVCLogin;
+package MVCLogin.entity;
 // Entity <=> table
 public class Users {
     private int id;

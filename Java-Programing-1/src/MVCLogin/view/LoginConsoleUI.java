@@ -1,4 +1,7 @@
-package MVCLogin;
+package MVCLogin.view;
+
+import MVCLogin.controller.LoginController;
+import MVCLogin.entity.Users;
 
 import java.io.IOException;
 import java.util.Scanner;

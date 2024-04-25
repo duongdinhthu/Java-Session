@@ -1,4 +1,4 @@
-package MVCLogin;
+package MVCLogin.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,8 @@
-package MVCLogin;
+package MVCLogin.model;
+
+import MVCLogin.entity.Users;
+import MVCLogin.model.Dbconnection;
+import MVCLogin.model.LoginDAO;
 
 import java.sql.*;
 
