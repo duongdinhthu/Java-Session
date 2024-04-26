@@ -53,6 +53,40 @@ public class ConsoleUI {
                         System.out.println(product.getProductId()+"\n" + product.getProductName())
                 );
     }
+    private static void update() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the  product ID update:");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        product.setProductId(id);
+        System.out.println("Enter the  product name:");
+        String name = scanner.nextLine();
+        product.setProductName(name);
+        System.out.println("Enter the  product Description:");
+        String desc = scanner.nextLine();
+        product.setProductDesc(desc);
+        System.out.println("Enter the  product Price:");
+        Double price = scanner.nextDouble();
+        product.setPrice(price);
+        productController.updateProductController(product);
+    }
+    public static void delete() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the  product ID update:");
+        int id = scanner.nextInt();
+        boolean success = productController.deleteProductController(id);
+        if (success == true){
+            System.out.println("delete product success!");
+        }else {
+            System.out.println("Delete product unsuccess!");
+        }
+    }
+    public static void search() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the  product ID update:");
+        int id = scanner.nextInt();
+        productController.searchProductController(id);
+    }
     public static void start() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         menu();
@@ -65,6 +99,18 @@ public class ConsoleUI {
             case 1:
                 System.out.println("Get all");
                 getAll();
+                break;
+            case 3:
+                System.out.println("Update");
+                update();
+                break;
+            case 4:
+                System.out.println("Delete");
+                delete();
+                break;
+            case 5:
+                System.out.println("Search");
+                search();
                 break;
         }
 

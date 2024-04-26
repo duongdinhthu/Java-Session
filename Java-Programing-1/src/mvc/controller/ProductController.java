@@ -20,5 +20,14 @@ public class ProductController {
     public ArrayList<Product> getAllProduct() throws SQLException {
         return productDAO.getAllProduct();
     }
+    public void updateProductController(Product product) throws SQLException {
+        productDAO.updateProduct(product);
+    }
+    public boolean deleteProductController(int proId) throws SQLException {
+        return productDAO.deleteProduct(proId);
+    }
+    public Product searchProductController(int proId) throws SQLException {
+       return productDAO.getProductById(proId);
+    }
 }
 

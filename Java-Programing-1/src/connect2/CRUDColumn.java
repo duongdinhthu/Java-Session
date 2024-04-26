@@ -1,5 +1,6 @@
 package connect2;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -10,36 +11,44 @@ public class CRUDColumn extends CRUDatabase{
     public static void createColumn(String newColumn,String dataType,String numberCharacter) throws SQLException {
         openConnection();
         String query = "alter table " + tableDB + " add " + newColumn + " " + dataType + "(" + numberCharacter + ")";
-        try {
-            statement.executeUpdate(query);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        PreparedStatement pstm = connection.prepareStatement(query);
+        int rs = pstm.executeUpdate();
+        if (rs != -1){
+            System.out.println("Create Success!");
+        }else {
+            System.out.println("Create Failure!");
         }
         closeConnection();
     }
-    public static void updateColum(String nameColumn,String newName,String dataType,String numberCharacter) throws SQLException {
+    public static void updateColum(String nameColumn, String newName, String dataType, String numberCharacter) throws SQLException {
         openConnection();
-        String query = "ALTER TABLE " + tableDB + " CHANGE COLUMN " + nameColumn + " " + newName + " " + dataType + "(" + numberCharacter + ")";        try {
-            statement.executeUpdate(query);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        String query = "ALTER TABLE " + tableDB + " CHANGE COLUMN " + nameColumn + " " + newName + " " + dataType + "(" + numberCharacter + ")";
+        PreparedStatement pstm = connection.prepareStatement(query);
+        int rs = pstm.executeUpdate();
+        if (rs != -1) {
+            System.out.println("Success!");
+        } else {
+            System.out.println("Failure!");
         }
         closeConnection();
     }
     public static void deleteColum(String nameColumn) throws SQLException {
         openConnection();
         String query = "ALTER TABLE " + tableDB + " DROP COLUMN " + nameColumn;
-        try {
-            statement.executeUpdate(query);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        PreparedStatement pstm = connection.prepareStatement(query);
+        int rs = pstm.executeUpdate();
+        if (rs!=-1){
+            System.out.println("Success!");
+        }else {
+            System.out.println("Failure!");
         }
         closeConnection();
     }
     public static void getAllColumn()throws SQLException{
         openConnection();
-        ResultSet rs = statement.executeQuery("SELECT * FROM " + tableDB);
-
+        String query = "SELECT * FROM " + tableDB;
+        PreparedStatement pstm = connection.prepareStatement(query);
+        ResultSet rs = pstm.executeQuery();
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnCount = rsmd.getColumnCount();
         System.out.println("Tên các cột trong bảng:");

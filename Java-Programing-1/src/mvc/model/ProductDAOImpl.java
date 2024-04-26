@@ -15,8 +15,8 @@ public class ProductDAOImpl implements ProductDAO{
     private final String SQL_CREATE_PRODUCT = "insert into products values(?,?,?,?)";
     private final String SQL_GET_PRODUCT_BY_ID = "select * from products where product_id = ?";
     private final String SQL_GET_ALL_PRODUCT = "select * from products";
-    private final String SQL_UPDATE_PRODUCT = "update products set product_name like ? where product_id = ?";
-    private final String SQL_DELETE_PRODUCT = "delete from products where id = ?";
+    private final String SQL_UPDATE_PRODUCT = "update products set product_name like ?,description = ?,price = ? where product_id = ?";
+    private final String SQL_DELETE_PRODUCT = "delete from products where product_id = ?";
 
     public ProductDAOImpl() throws SQLException {
     }
@@ -69,8 +69,10 @@ public class ProductDAOImpl implements ProductDAO{
     @Override
     public void updateProduct(Product product) throws SQLException {
         PreparedStatement pstm = connection.prepareStatement(SQL_UPDATE_PRODUCT);
-        pstm.setInt(2,product.getProductId());
+        pstm.setInt(4,product.getProductId());
         pstm.setString(1,product.getProductName());
+        pstm.setString(2,product.getProductDesc());
+        pstm.setDouble(3,product.getPrice());
         pstm.executeUpdate();
 
     }

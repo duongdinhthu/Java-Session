@@ -2,7 +2,7 @@ package connect2;
 
 import java.util.Scanner;
 
-import static connect2.CRUDatabase.tableDB;
+
 import static connect2.CreateColumn.addColumn;
 import static connect2.DeleteColumn.deleteColumn;
 import static connect2.GetColumn.getCL;
