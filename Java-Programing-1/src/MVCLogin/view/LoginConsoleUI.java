@@ -30,6 +30,7 @@ public class LoginConsoleUI {
         user.setPassword(password);
         //step 1 call controller
         String result = loginController.loginStatementController(user);
+        //step 5
         System.out.println(result);
 
     }
@@ -42,7 +43,7 @@ public class LoginConsoleUI {
         user.setPassword(password);
         //step 1 call controller
         String result = loginController.loginPrepareController(user);
-        // step 4 to view (return to view from model)
+        // step 5 to view (return to view from model)
         System.out.println(result);
     }
     public void start(){
@@ -59,7 +60,7 @@ public class LoginConsoleUI {
                     loginPrepareStatement();
                     break;
                 default:
-                    System.out.println("khong co lua chon nao");
+                    throw new AssertionError();// chi tiet loi se duowc show ra
             }
         }
     }
