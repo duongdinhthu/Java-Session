@@ -1,0 +1,14 @@
+
+t
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "choice".(üî¼¶
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸Úá¯
+@	java:S106"+Replace this use of System.out by a logger.(‰è¼
+E	java:S106"+Replace this use of System.out by a logger.(Ğüãóÿÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ÓØìãøÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ïÚâÀşÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(À¤ÿ£
+@	java:S106"+Replace this use of System.out by a logger.(Ñæï­
+E	java:S106""+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ
+@	java:S106&"+Replace this use of System.out by a logger.(À¤ÿ£
+@	java:S106("+Replace this use of System.out by a logger.(Ñæï­
+E	java:S106/"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ

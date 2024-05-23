@@ -1,15 +1,16 @@
-package connect2;
+package connectDatabase;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import static connect2.CRUDatabase.*;
-import static connect2.Create.create;
-import static connect2.Delete.delete;
-import static connect2.Menu.menu;
-import static connect2.MenuDataClient.menuData;
-import static connect2.Search.search;
-import static connect2.SearchTab.searchTab;
-import static connect2.Update.update;
+
+import static connectDatabase.CRUDatabase.*;
+import static connectDatabase.Create.create;
+import static connectDatabase.Delete.delete;
+import static connectDatabase.Menu.menu;
+import static connectDatabase.MenuDataClient.menuData;
+import static connectDatabase.Search.search;
+import static connectDatabase.SearchTab.searchTab;
+import static connectDatabase.Update.update;
 public class MenuData {
     public static void menuCRUD() throws SQLException {
         Scanner scanner = new Scanner(System.in);
